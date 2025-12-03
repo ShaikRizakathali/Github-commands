@@ -1,0 +1,17 @@
+ssh-keygen -t rsa -b 4096 -C "shaikhrizakathali@gmail.com"
+
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/id_rsa
+
+cat ~/.ssh/id_rsa.pub
+# Copy the output and add it to your Git hosting service (e.g., GitHub, GitLab, Bitbucket) under SSH keys in your account settings. 
+# For GitHub:
+# 1. Go to GitHub.com
+# 2. Click on your profile picture in the top right corner and select "Settings"
+# 3. In the left sidebar, click "SSH and GPG keys"              
+# 4. Click the "New SSH key" button
+# 5. Paste the copied key into the "Key" field and give it a title
+# 6. Click "Add SSH key"        
+git config --global user.name "Your Name"
+git config --global user.email "        
